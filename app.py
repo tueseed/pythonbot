@@ -12,9 +12,6 @@ app = Flask(__name__)
 def index():
     return 'นี่คือหน้วเวบ python ที่รันบน heroku นะครับน้องมีน แต่เอา url ไปใส่ใน webhook ของ ไลน์ บอท แล้ว มัน verify ไม่ผ่านอ่ะ .'
  
-@app.route('/test,methods=['GET']')
-def nutt():
-    return 'ออมันเป็นอย่างนี้นี่เองหราาา'
  
 @app.route('/bot', methods=['POST'])
 
