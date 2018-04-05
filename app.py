@@ -8,7 +8,7 @@ LINE_API_KEY = 'Bearer Ic7C4amybrY/6I6lkMssHnGSK3vVz95ZMrSYPqjcRt+Sf+VxzcYDVAy85
 
 app = Flask(__name__)
  
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/')
 def index():
     return 'นี่คือหน้วเวบ python ที่รันบน heroku นะครับน้องมีน แต่เอา url ไปใส่ใน webhook ของ ไลน์ บอท แล้ว มัน verify ไม่ผ่านอ่ะ .'
  
