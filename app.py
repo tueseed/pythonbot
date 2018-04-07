@@ -46,7 +46,7 @@ def bot():
 
     # ทดลอง Echo ข้อความกลับไปในรูปแบบที่ส่งไป-มา (แบบ json)
     replyStack.append(msg_in_string)
-    reply(replyToken, replyStack[:5])
+    reply(replyToken, replyStack[5])
     
     return 'OK',200
  
