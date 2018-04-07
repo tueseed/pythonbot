@@ -22,8 +22,9 @@ def index():
     cursor = con.cursor()
     query ="SELECT * FROM tbl_holiday"
     cursor.execute(query)
-    result = cursor.fetchall()
-    return str(result)\n
+    for result in cursor.fatchall():
+        date = result[1]
+        return str(date)+'\n'
     cursor.close()
     con.close()
     
