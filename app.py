@@ -8,10 +8,7 @@ global LINE_API_KEY
 LINE_API_KEY = 'Bearer Ic7C4amybrY/6I6lkMssHnGSK3vVz95ZMrSYPqjcRt+Sf+VxzcYDVAy8507sOMd+sP3XZPUyugknLV56oNMg3woZGXOsjUDclHB/E9r+2Og2VczR3137EvthFQjkz2fg34JJxhaX7RDMhN6C840V5gdB04t89/1O/w1cDnyilFU='
 
 app = Flask(__name__)
- 
-@app.route('/')
-def index():
-    con = mysql.connector.connect(user='bdb2c368d1a6ad',
+con = mysql.connector.connect(user='bdb2c368d1a6ad',
                             password='09b374bf',
                             host='us-cdbr-iron-east-05.cleardb.net',
                             database='heroku_056efb00ca70c61',
@@ -19,7 +16,9 @@ def index():
                             ssl_key = './bdb2c368d1a6ad-key.pem',
                             ssl_cert = './bdb2c368d1a6ad-cert.pem'
                               )
-    cursor = con.cursor()
+
+@app.route('/')
+def index():
     return 'This is chatbot server.'
 
 @app.route('/bot', methods=['POST'])
