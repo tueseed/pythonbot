@@ -60,15 +60,15 @@ def reply(replyToken, textList):
         'Authorization': LINE_API_KEY
     }
     msgs = []
-   #  msgs = textList
-    for text in textList:
+    text = textList
+    #for text in textList:
         msgs.append({
             "type":"text",
             "text":text
-       })
+       #})
     data = json.dumps({
         "replyToken":replyToken,
-        "messages":"hjkhikjhijkb"
+        "messages":msgs
     })
     requests.post(LINE_API, headers=headers, data=data)
     return
