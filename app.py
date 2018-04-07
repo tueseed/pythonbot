@@ -26,6 +26,7 @@ def index():
     for result in cursor.fetchall():
         rows.append(result)
     return str(rows)
+    return 'nutthapong '
     cursor.close()
     con.close()
     
