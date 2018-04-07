@@ -2,14 +2,6 @@ from flask import Flask, request
 import json
 import requests
 import mysql.connector
-con = mysql.connector.connect(user='bdb2c368d1a6ad',
-                            password='09b374bf',
-                            host='us-cdbr-iron-east-05.cleardb.net',
-                            database='heroku_056efb00ca70c61',
-                            ssl_ca = './cleardb-ca.pem',
-                            ssl_key = './bdb2c368d1a6ad-key.pem',
-                            ssl_cert = './bdb2c368d1a6ad-cert.pem'
-                              )
 
 # ตรง YOURSECRETKEY ต้องนำมาใส่เองครับจะกล่าวถึงในขั้นตอนต่อๆ ไป
 global LINE_API_KEY
