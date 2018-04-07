@@ -11,6 +11,17 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
+    con = mysql.connector.connect(user='bdb2c368d1a6ad',
+                            password='09b374bf',
+                            host='us-cdbr-iron-east-05.cleardb.net',
+                            database='heroku_056efb00ca70c61',
+                            ssl_ca = './cleardb-ca.pem',
+                            ssl_key = './bdb2c368d1a6ad-key.pem',
+                            ssl_cert = './bdb2c368d1a6ad-cert.pem'
+                              )
+cursor = con.cursor()
+query ="SELECT * FROM tbl_holiday"
+cursor.execute(query)
     return 'This is chatbot server.'
 
 @app.route('/bot', methods=['POST'])
