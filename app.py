@@ -19,6 +19,9 @@ def index():
                             ssl_key = './bdb2c368d1a6ad-key.pem',
                             ssl_cert = './bdb2c368d1a6ad-cert.pem'
                               )
+    cursor = con.cursor()
+    query ="SELECT * FROM tbl_holiday"
+    cursor.execute(query)
     return 'This is chatbot server.'
 
 @app.route('/bot', methods=['POST'])
