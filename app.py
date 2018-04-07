@@ -43,10 +43,12 @@ def bot():
     
     # Token สำหรับตอบกลับ (จำเป็นต้องใช้ในการตอบกลับ)
     replyToken = msg_in_json["events"][0]['replyToken']
-
+    txt = msg_in_json["events"][0]['message']
+    txtre = txt['text']
+    
     # ทดลอง Echo ข้อความกลับไปในรูปแบบที่ส่งไป-มา (แบบ json)
     replyStack.append(msg_in_string)
-    reply(replyToken, replyStack[:5])
+    reply(replyToken, txtre)
     
     return 'OK',200
  
