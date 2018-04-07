@@ -24,7 +24,7 @@ def index():
     cursor.execute(query)
     for result in cursor.fetchall():
         date = result[1]
-        return date
+        return str(date)
     cursor.close()
     con.close()
     
