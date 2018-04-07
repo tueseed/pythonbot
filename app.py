@@ -23,7 +23,7 @@ def index():
     query ="SELECT * FROM tbl_holiday"
     cursor.execute(query)
     result = cursor.fetchall()
-    return str(result)
+    return str(result)\n
     cursor.close()
     con.close()
     
