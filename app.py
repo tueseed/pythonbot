@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request,render_template
 import json
 import requests
 import mysql.connector
@@ -29,7 +29,11 @@ def index():
     return 'nutthapong '
     cursor.close()
     con.close()
-    
+
+@app.route('/main')
+def main():
+    return render_template('main.html')
+
 
 @app.route('/bot', methods=['POST'])
 
