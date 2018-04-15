@@ -30,7 +30,7 @@ def index():
     cursor.close()
     con.close()
 
-@app.route('/main')
+@app.route('/main', methods=['POST'])
 def main():
     return render_template('main.html')
 
