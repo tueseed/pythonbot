@@ -60,9 +60,9 @@ def bot():
 
 def login_bud():
     json_from_login_page = request.get_json()
-    data_instring = json.dump(json_from_login_page)
-    value1 = data_instring['value1']
-    return 'adkmfadknvg'
+    data_instring = json.dumps(json_from_login_page)
+    value1 = json_from_login_page['value1']
+    return value1
  
 def reply(replyToken, textList):
     # Method สำหรับตอบกลับข้อความประเภท text กลับครับ เขียนแบบนี้เลยก็ได้ครับ
