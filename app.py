@@ -60,7 +60,7 @@ def bot():
 
 def login_bud():
     content = request.get_json()
-    a1 = content['value1']
+    #a1 = content['value1']
     return 'jsonpost'
  
 def reply(replyToken, textList):
