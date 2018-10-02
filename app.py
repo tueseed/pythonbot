@@ -59,10 +59,9 @@ def bot():
 @app.route('/check_login', methods=['POST'])
 
 def login_bud():
-    json_from_login_page = request.get_json()
-    data_instring = json.dumps(json_from_login_page)
-    value1 = json_from_login_page['value1']
-    return value1
+    content = request.get_json()
+    a1 = content['value1']
+    return 'jsonpost'
  
 def reply(replyToken, textList):
     # Method สำหรับตอบกลับข้อความประเภท text กลับครับ เขียนแบบนี้เลยก็ได้ครับ
