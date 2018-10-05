@@ -62,7 +62,8 @@ def login_bud():
     content = request.get_json()
     contents = json.dumps(content)
     #a1 = contents['value1']
-    return contents['value1']
+    y = json.loads(contents)
+    return y["value1"]
  
 def reply(replyToken, textList):
     # Method สำหรับตอบกลับข้อความประเภท text กลับครับ เขียนแบบนี้เลยก็ได้ครับ
